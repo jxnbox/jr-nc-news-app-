@@ -24,3 +24,4 @@ export const getArticles = () => {
             console.log('err')
         })
 }
+
