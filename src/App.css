@@ -63,7 +63,7 @@ nav {
 }
 
 #article_container {
-  height: 50vh;
+  height: 60vh;
   border: 1px solid black;
   display: flex;
   align-items: center;
@@ -75,7 +75,6 @@ nav {
   margin: auto;
   width: 85vw;
   height: 90vw;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,3 +89,11 @@ article {
   font-size: 10px;
   scroll-snap-align: start;
 } 
+
+#article_title {
+  color: black;
+}
+
+#article_created_at {
+  color: #626262;
+}
