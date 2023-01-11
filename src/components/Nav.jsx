@@ -18,8 +18,8 @@ function Nav() {
     return (
         <nav>
             <ul id="topics_ul">
-                <li key='Home'><Link to='/' id='topic' className={'topic' + '_' + 'home'}>All</Link></li>
-                {topics.map((topic,index) => <li key={topic.slug}><Link to={topic.slug} id='topic' className={'topic' + '_' + topic.slug}>{topic.slug}</Link></li>)}
+                <li key='Home'><Link to='/' id='topic' className={'topic_home'}>All</Link></li>
+                {topics.map((topic,index) => <li key={topic.slug}><Link to={topic.slug} id='topic' className={`topic_${topic.slug}`}>{topic.slug}</Link></li>)}
             </ul>
         </nav>
     )
