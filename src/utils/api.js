@@ -9,19 +9,25 @@ export const getTopics = () => {
         .then((res) => {
             return res.data
         })
-        .catch(() => {
-            console.log('err')
-        })
 }
 
 export const getArticles = () => {
-
     return newsApi.get(`/articles`)
         .then((res) => {
             return res.data.articles
         })
-        .catch(() => {
-            console.log('err')
+}
+
+export const getSingleArticle = (article_id) => {
+    return newsApi.get(`/articles/${article_id}`)
+        .then((res) => {
+            return res.data.article
         })
 }
 
+export const getAllArticlesIds = () => {
+    return newsApi.get(`/articles-id`)
+        .then((res) => {
+            return res.data
+        })
+} 
