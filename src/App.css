@@ -277,7 +277,6 @@ nav {
 #next_link {
   background-color: #041e53;
   height: 0;
-  flex-grow: 2;
 }
 
 #user_avatar {
@@ -367,4 +366,42 @@ nav {
 
 #vote_btn:focus {
   background-color: #626262;
+}
+
+@keyframes fade-inout {
+  0%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+
+.connection_normal {
+  position: absolute;
+  background-color: green;
+  color: white;
+  border-radius: 30px;
+  padding: 5px;
+  top: 8px;
+  left: 10px;
+  animation: fade-inout 3s forwards;
+}
+
+.connection_warning {
+  position: absolute;
+  background-color: rgb(129, 0, 0);
+  color: white;
+  border-radius: 30px;
+  padding: 5px;
+  top: 8px;
+  left: 10px;
+}
+
+.errorMsg {
+  position: absolute;
+  bottom: 7vh;
+  left: 20vw;
+  background-color: rgb(129, 0, 0);
+  color: white;
+  padding: 5px;
+  margin: auto;
+  width: 60vw;
+  border-radius: 30px;
 }

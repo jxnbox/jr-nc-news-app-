@@ -45,3 +45,14 @@ export const getUsers = () => {
             return res.data
         })
 }
+
+export const patchArticleVote = (article_id) => {
+    const patchBody = {
+        inc_votes : 1
+    }
+
+    return newsApi.patch(`/articles/${article_id}`, patchBody)
+        .then((res) => {
+            return res.data
+        });
+}

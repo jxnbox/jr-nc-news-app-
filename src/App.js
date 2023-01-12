@@ -5,12 +5,13 @@ import Nav from './components/Nav';
 import DisplayArticles from './components/DisplayArticles';
 import ArticleCard from './components/ArticleCard';
 import DisplayComments from './components/DisplayComments';
+import CheckConnection from './components/CheckConnection';
 
 function App() {
 
-
   return (
     <div className="App">
+      <CheckConnection />
       <Header />
       <Nav />
       <Routes>

@@ -33,7 +33,7 @@ function ArticleCard() {
 
         fetchArticle(article_id)
         fetchAllArticleId()
-    }, [article_id])
+    }, [article_id, article])
 
     if (isLoading) {
         return (
@@ -60,7 +60,7 @@ function ArticleCard() {
                         <p id='article_body'>{article.body}</p>
                 </article>
             </section>
-            <DisplayUserInteractions votes={article.votes} comments={article.comment_count} articleid={article.article_id}/>
+            <DisplayUserInteractions votes={article.votes} setArticle={setArticle} comments={article.comment_count} articleid={article.article_id}/>
         </div>
     )
 }
