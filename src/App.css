@@ -154,9 +154,11 @@ nav {
 #button_container button:nth-child(1){
   border-radius: 10px 0px 0 0;
   background-image: linear-gradient(to top, #122f6a, #193d86 ,#2c57ae);
-  flex-grow: 2;
+  width: 158.766px;
   font-size: 20px;
+  height: 40px;
   border-color: #122f6a;
+
 }
 
 #button_container button:nth-child(n):active{
@@ -182,7 +184,9 @@ nav {
 
 #comment_link {
   text-decoration: none;
-  width: 3rem;
+  border-radius: 10px 0px 0 0;
+  font-size: 20px;
+  border-color: #122f6a;
 }
 
 #article_body {
@@ -273,6 +277,7 @@ nav {
 #next_link {
   background-color: #041e53;
   height: 0;
+  flex-grow: 2;
 }
 
 #user_avatar {

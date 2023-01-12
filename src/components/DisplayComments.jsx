@@ -9,19 +9,16 @@ function DisplayComments() {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const handdleSubmit = (e) => {
-        e.preventDefault();
-    }
-    
     useEffect(() => {
         async function fetchComments(articleId) {
-            let request = await api.getCommentsByArticleId(articleId);
+            const request = await api.getCommentsByArticleId(articleId);
             setIsLoading(false);
+            console.log(request)
             setComments(request);
         }
 
         async function fetchUsers() {
-            let request = await api.getUsers()
+            const request = await api.getUsers()
             setUsers(request);
         }
 
@@ -45,7 +42,7 @@ function DisplayComments() {
             <h2 className='comment_title'>COMMENTS</h2>
 
             <ul id="comment_section">
-                {comments.map(comment => {
+                {comments.length === 0 ? <h2>No comment</h2> : comments.map(comment => {
                     return users.map(user => {
                         if(user.username === comment.author) {
                             return (
