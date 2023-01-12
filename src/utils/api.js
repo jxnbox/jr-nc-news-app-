@@ -38,3 +38,10 @@ export const getCommentsByArticleId = (article_id) => {
             return res.data
         })
 }
+
+export const getUsers = () => {
+    return newsApi.get(`/users`)
+        .then((res) => {
+            return res.data
+        })
+}

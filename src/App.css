@@ -154,9 +154,11 @@ nav {
 #button_container button:nth-child(1){
   border-radius: 10px 0px 0 0;
   background-image: linear-gradient(to top, #122f6a, #193d86 ,#2c57ae);
-  flex-grow: 2;
+  width: 158.766px;
   font-size: 20px;
+  height: 40px;
   border-color: #122f6a;
+
 }
 
 #button_container button:nth-child(n):active{
@@ -182,7 +184,9 @@ nav {
 
 #comment_link {
   text-decoration: none;
-  width: 3rem;
+  border-radius: 10px 0px 0 0;
+  font-size: 20px;
+  border-color: #122f6a;
 }
 
 #article_body {
@@ -273,4 +277,94 @@ nav {
 #next_link {
   background-color: #041e53;
   height: 0;
+  flex-grow: 2;
+}
+
+#user_avatar {
+  background-color: white;
+  height: 50px;
+  margin: auto;
+  width: 50px;
+  border: 1px solid #041e53;
+  border-radius: 50%;
+}
+
+#comment_user_info {
+  border-radius: 10px 10px 0px 0;
+  background-image: linear-gradient(to top, #122f6a,#2c57ae);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+}
+
+#comment_created_at{
+  text-align: right;
+  flex-grow: 3;
+  color: #bbbbbb;
+  padding-right: 10px;
+  margin: auto;
+}
+
+#comment_author {
+  flex-grow: 2;
+  margin: auto;
+}
+
+#comment_li {
+  margin-top: 20px;
+  list-style: none;
+}
+
+#comment_section {
+  margin: 0;
+  padding: 0;
+}
+
+#comment_article {
+  background-color: white;
+  margin: auto;
+  width: 80vw;
+  margin-bottom: 20px;
+  font-size: 13px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  box-shadow: -0.5px 2px 5px black;
+  padding-bottom: 10px;
+}
+
+#comment_container {
+  padding: 0;
+}
+
+.comment_title {
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 1px 6px 5px rgb(228, 228, 228)
+}
+
+#comment_body {
+  font-size: 20px;
+}
+
+#votes_div {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment_votes {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#vote_btn {
+  color: #2265eb;
+  font-size: 15px;
+  border-radius: 100px;
+  border-color: #2869ed;
+}
+
+#vote_btn:focus {
+  background-color: #626262;
 }
