@@ -405,3 +405,78 @@ nav {
   width: 60vw;
   border-radius: 30px;
 }
+
+#login {
+  position: absolute;
+  top: 1.2vh;
+  right: 2vw;
+}
+
+#loginImg {
+  width: 30px;
+  height: 30px;
+}
+
+#loginBtn {
+  background-color: #ffffff;
+  border-radius: 20px;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+}
+
+#login_div {
+  width: 90vw;
+  height: 80vh;
+  position: absolute;
+  background-image: linear-gradient(to top, #122f6a, #193d86 ,#113376);
+  left: 5%;
+  top: 14%;
+  border-radius: 2%;
+}
+
+#add_comment_btn {
+  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(to top, #122f6a, #193d86 ,#2c57ae);
+  font-size: 20px;
+  height: 7vh;
+  width: 85vw;
+  border-color: #122f6a;
+  color: white;
+  box-shadow: 1px -2px 5px #193d86;
+}
+
+#add_comment_btn:active {
+  background-image: linear-gradient(to top, #385389, #406cc3 ,#3a6ac9);
+}
+
+#comment_form_link {
+  margin: 0;
+}
+
+#user_loginImg{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.input_comment_box {
+  margin: auto;
+  width: 90vw;
+  height: 90vw;
+  border-radius: 10px;
+  font-size:14pt;
+}
+
+#comment_form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#submit_comment_btn {
+  width: 120px;
+  height: 80px;
+  margin: 30px auto auto auto;
+  border-radius: 10px;
+}

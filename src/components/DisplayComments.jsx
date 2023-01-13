@@ -51,7 +51,7 @@ function DisplayComments() {
                                         <section id="comment_user_info">
                                             <img src={user.avatar_url} id='user_avatar'/>
                                             <h3 id="comment_author">{comment.author}</h3>
-                                            <p id="comment_created_at">{moment(comment.created_at).startOf('day').fromNow()}</p>
+                                            <p id="comment_created_at">{moment(comment.created_at).fromNow()}</p>
                                             <VoteUserInteraction votes={comment.votes}/>
                                         </section>
                                         <p id="comment_body">{comment.body}</p>
@@ -62,6 +62,7 @@ function DisplayComments() {
                     })
                 })}
             </ul>
+            <Link to={`/articles/${article_id}/comment-form`} id='comment_form_link'><button id='add_comment_btn'>Add comment</button></Link>
         </div>
     )
 }

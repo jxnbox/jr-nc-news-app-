@@ -32,7 +32,7 @@ function DisplayUserInteractions({votes, comments, articleid, setArticle}) {
 
     useEffect(() => {
 
-    }, [error])
+    }, [error, voteCount])
 
     return (
         <section>
