@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as api from '../utils/api';
 import moment from "moment";
+import VoteUserInteraction from "./VoteUserInteraction";
 
 function DisplayComments() {
     const { article_id } = useParams();
@@ -13,7 +14,6 @@ function DisplayComments() {
         async function fetchComments(articleId) {
             const request = await api.getCommentsByArticleId(articleId);
             setIsLoading(false);
-            console.log(request)
             setComments(request);
         }
 
@@ -51,12 +51,8 @@ function DisplayComments() {
                                         <section id="comment_user_info">
                                             <img src={user.avatar_url} id='user_avatar'/>
                                             <h3 id="comment_author">{comment.author}</h3>
-                                            <p id="comment_created_at">{moment(comment.created_at).startOf('day').fromNow()}</p>
-                                            <div id="votes_div">
-                                                <button id="vote_btn">⬆</button>
-                                                <p id="comment_votes">{comment.votes}</p>
-                                                <button id="vote_btn">⬇</button>                                                        
-                                            </div>
+                                            <p id="comment_created_at">{moment(comment.created_at).fromNow()}</p>
+                                            <VoteUserInteraction votes={comment.votes}/>
                                         </section>
                                         <p id="comment_body">{comment.body}</p>
                                     </article>
@@ -66,6 +62,7 @@ function DisplayComments() {
                     })
                 })}
             </ul>
+            <Link to={`/articles/${article_id}/comment-form`} id='comment_form_link'><button id='add_comment_btn'>Add comment</button></Link>
         </div>
     )
 }

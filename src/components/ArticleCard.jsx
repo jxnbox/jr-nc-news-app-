@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate, } from "react-router-dom";
 import * as api from '../utils/api'
 import moment from "moment";
 import DisplayUserInteractions from "./DisplayUserInteractions";
@@ -12,11 +12,14 @@ function ArticleCard() {
     const [nextArticle, setNextArticle] = useState(parseInt(article_id))
     const [prevArticle, setPrevArticle] = useState(parseInt(article_id))
 
-    const handleNext = (e) => {
+    const handleNext = () => {
         setNextArticle(articleIds[articleIds.findIndex(currentArticle => currentArticle.article_id === nextArticle) + 1].article_id)
+        setIsLoading(true)
+
     } 
-    const handlePrev = (e) => {
+    const handlePrev = () => {
         setPrevArticle(articleIds[articleIds.findIndex(currentArticle => currentArticle.article_id === nextArticle) - 1].article_id)
+        setIsLoading(true)
     } 
 
     useEffect( () => {
@@ -33,7 +36,7 @@ function ArticleCard() {
 
         fetchArticle(article_id)
         fetchAllArticleId()
-    }, [article_id])
+    }, [article_id, article])
 
     if (isLoading) {
         return (
@@ -60,7 +63,7 @@ function ArticleCard() {
                         <p id='article_body'>{article.body}</p>
                 </article>
             </section>
-            <DisplayUserInteractions votes={article.votes} comments={article.comment_count} articleid={article.article_id}/>
+            <DisplayUserInteractions votes={article.votes} setArticle={setArticle} comments={article.comment_count} articleid={article.article_id}/>
         </div>
     )
 }
