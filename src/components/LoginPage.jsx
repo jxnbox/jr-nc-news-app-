@@ -27,7 +27,6 @@ function LoginPage({setCurrentUser, currentUser, setIsUserLoggedIn}) {
         async function fetchUsers() {
             const request = await api.getUsers()
             setUsers(request);
-            console.log(request)
         }
 
         fetchUsers();
@@ -38,8 +37,8 @@ function LoginPage({setCurrentUser, currentUser, setIsUserLoggedIn}) {
         <div id="login_div">
             <form id="login_form" onSubmit={handleSubmit}>
                 <label htmlFor="username">username</label>
-                <input type='text' name="username" value={userInput} onChange={handleValue}></input>
-                <input type='submit' value='Login'/>
+                <input type='text' name="username" value={userInput} onChange={handleValue} placeholder='type your username here...'></input>
+                <input type='submit' value='Login' />
             </form>
 
             <ul>

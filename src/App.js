@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<DisplayArticles />} />
         <Route path="/articles/:article_id" element={<ArticleCard />} />
         <Route path="/articles/:article_id/comments" element={<DisplayComments />} />
-        <Route path='/articles/:article_id/comment-form' element={<AddCommentForm currentUser={currentUser}/>} />
+        <Route path='/articles/:article_id/comment-form' element={<AddCommentForm currentUser={currentUser} setCurrentUser={setCurrentUser} isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn}/>} />
         <Route path='/users' element={<LoginPage setCurrentUser={setCurrentUser} currentUser={currentUser} setIsUserLoggedIn={setIsUserLoggedIn}/>} />
       </Routes>
     </div>

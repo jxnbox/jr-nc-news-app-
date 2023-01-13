@@ -324,17 +324,17 @@ nav {
 #comment_article {
   background-color: white;
   margin: auto;
-  width: 80vw;
+  width: 85vw;
   margin-bottom: 20px;
   font-size: 13px;
   scroll-snap-align: start;
   border-radius: 10px;
   box-shadow: -0.5px 2px 5px black;
-  padding-bottom: 10px;
+  padding: 0, 5px 5px 10px;
 }
 
 #comment_container {
-  padding: 0;
+  padding: 0
 }
 
 .comment_title {
@@ -345,6 +345,9 @@ nav {
 
 #comment_body {
   font-size: 20px;
+  word-wrap: break-word;
+  text-align: left;
+  padding: 0px 10px 10px 10px;
 }
 
 #votes_div {
@@ -426,13 +429,12 @@ nav {
 }
 
 #login_div {
-  width: 90vw;
-  height: 80vh;
+  width: 100vw;
+  height: 93vh;
   position: absolute;
-  background-image: linear-gradient(to top, #122f6a, #193d86 ,#113376);
-  left: 5%;
-  top: 14%;
-  border-radius: 2%;
+  top: 7%;
+  background-color: #041e53;
+  opacity: 98%;
 }
 
 #add_comment_btn {
@@ -440,7 +442,7 @@ nav {
   background-image: linear-gradient(to top, #122f6a, #193d86 ,#2c57ae);
   font-size: 20px;
   height: 7vh;
-  width: 85vw;
+  width: 89vw;
   border-color: #122f6a;
   color: white;
   box-shadow: 1px -2px 5px #193d86;
@@ -479,4 +481,55 @@ nav {
   height: 80px;
   margin: 30px auto auto auto;
   border-radius: 10px;
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 60px 10px 10px 10px;
+  width: 94vw;
+  background-color: white;
+}
+
+#login_form label {
+  text-align: left;
+  margin-left: 14px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+#login_form input[type=text] {
+  margin: auto;
+  width: 80vw;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#login_form input[type=text]:focus {
+  outline: none;
+}
+
+#login_form input[type=submit] {
+  border-color: #041e53;
+  color: white;
+  border-radius: 20px;
+  margin: auto;
+  width: 20vw;
+  height: 6vh;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to top, #122f6a, #193d86 ,#2c57ae);
+}
+
+#logged_in {
+  /* position: absolute; */
+  background-color: green;
+  color: white;
+  border-radius: 30px;
+  padding: 5px;
+  top: 8px;
+  left: 10px;
+  animation: fade-inout 5s forwards;
 }
