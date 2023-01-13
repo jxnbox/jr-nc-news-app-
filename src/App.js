@@ -10,6 +10,7 @@ import Login from './components/Login';
 import LoginPage from './components/LoginPage';
 import AddCommentForm from './components/AddCommentForm';
 import { useEffect, useState } from 'react';
+import DisplayArticlesByTopic from './components/DisplayArticlesByTopic';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({})
@@ -27,6 +28,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<DisplayArticles />} />
+        <Route path="/:topic" element={<DisplayArticlesByTopic />} />
         <Route path="/articles/:article_id" element={<ArticleCard />} />
         <Route path="/articles/:article_id/comments" element={<DisplayComments />} />
         <Route path='/articles/:article_id/comment-form' element={<AddCommentForm currentUser={currentUser} setCurrentUser={setCurrentUser} isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn}/>} />

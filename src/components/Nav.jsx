@@ -17,7 +17,7 @@ function Nav() {
         <nav>
             <ul id="topics_ul">
                 <li key='Home'><Link to='/' id='topic' className={'topic_home'}>All</Link></li>
-                {topics.map((topic) => <li key={topic.slug}><Link to={topic.slug} id='topic' className={`topic_${topic.slug}`}>{topic.slug}</Link></li>)}
+                {topics.map((topic) => <li key={topic.slug}><Link to={`/${topic.slug}`} id='topic' className={`topic_${topic.slug}`}>{topic.slug}</Link></li>)}
             </ul>
         </nav>
     )
